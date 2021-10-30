@@ -12,6 +12,6 @@ export async function createUserHandler(
     return res.send(user);
   } catch (e: any) {
     logger.error(e);
-    return res.status(409).send(e.message);
+    return res.status(404).send(e.message);
   }
 }
